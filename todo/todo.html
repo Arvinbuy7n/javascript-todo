@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+
+  <body>
+    <div class="todo">
+      <button id="add">Add task</button>
+
+      <div class="parent">
+        <div class="section">
+          <div class="container">
+            <div class="head">
+              <p class="point"></p>
+              <p id="title">To do</p>
+            </div>
+
+            <p class="count">5</p>
+          </div>
+
+          <div class="todoCards"></div>
+        </div>
+
+        <div class="section">
+          <div class="container">
+            <div class="head">
+              <p class="point"></p>
+              <p class="title">In progress</p>
+            </div>
+
+            <p class="count">5</p>
+          </div>
+
+          <div class="todoCards"></div>
+        </div>
+
+        <div class="section">
+          <div class="container">
+            <div class="head">
+              <p class="point"></p>
+              <p class="title">Done</p>
+            </div>
+
+            <p class="count">5</p>
+          </div>
+
+          <div class="todoCards"></div>
+        </div>
+
+        <div class="section">
+          <div class="container">
+            <div class="head">
+              <p class="point"></p>
+              <p class="title">Blocked</p>
+            </div>
+
+            <p class="count">5</p>
+          </div>
+
+          <div class="todoCards"></div>
+        </div>
+
+        <div class="modal">
+          <form class="sector">
+            <div class="num">
+              <p class="enter">Enter task</p>
+
+              <input name="text" class="name" placeholder="Task name..." />
+
+              <select class="select" name="status">
+                <option disabled selected>Select status</option>
+                <option value="To do">To do</option>
+                <option value="In progress">In progress</option>
+                <option value="Done">Done</option>
+                <option value="Blocked">Blocked</option>
+              </select>
+            </div>
+
+            <button class="submit" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="test.js"></script>
+  </body>
+</html>

@@ -1,11 +1,8 @@
-let age = 15;
-
-if (age < 12) {
-  console.log("5$");
-} else if (age < 18) {
-  console.log("10$");
-} else if (age < 60) {
-  console.log("20$");
-} else {
-  console.log("15$");
+function time(s) {
+  let hour = Math.floor(s / 3600);
+  let min = Math.floor((s % 3600) / 60);
+  let sec = s % 60;
+  return [hour, min, sec];
 }
+
+console.log(time(3612));
