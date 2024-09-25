@@ -1,83 +1,137 @@
 * {
-  box-sizing: border-box;
   margin: 0;
+  box-sizing: border-box;
 }
 
-body {
-  background: #1a1a1a;
-  width: 100vw;
-  height: 100vh;
+.captain {
   display: flex;
+  width: 100vw;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  gap: 20px;
+  margin-top: 60px;
 }
 
-.todo {
+.navbar {
+  background-color: #e0b746;
+  width: 330px;
+  border-radius: 8px;
+  border: solid 1px black;
+}
+
+.second {
+  display: flex;
+  padding: 20px;
+  gap: 15px;
+  margin-left: 3px;
+}
+
+.size {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.zurag {
+  width: 25px;
+  height: 25px;
+  border-radius: 8px;
+  border: solid 1px black;
+  border-radius: 15px;
+  margin: 15px 0px 0px 15px;
+  padding: 5px;
+}
+
+.card {
   display: flex;
   flex-direction: column;
-  align-items: end;
-  gap: 20px;
+  background-color: aliceblue;
+  width: 300px;
+  height: fit-content;
+  margin-left: 14px;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
-.add {
-  color: #fff;
-  width: 109px;
-  height: 44px;
-  background-color: #00a300;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: 600;
-  font-family: Inter;
-}
-
-.parent {
-  position: relative;
+.nav {
+  width: 100%;
   display: flex;
-  gap: 20px;
-}
-
-.section {
-  background: #000;
-  width: 280px;
-  height: 672px;
-  border-radius: 12px;
-  padding: 20px 16px;
-}
-
-.container {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
-.head {
+.color {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  width: 100%;
 }
 
-.point {
-  width: 12px;
-  height: 12px;
-  background: #00a300;
-  border-radius: 12px;
+.cardTitle {
+  display: flex;
+  justify-content: space-between;
 }
 
-.title {
-  font-size: 18px;
-  font-weight: 700;
-  font-family: inter;
-  color: #fff;
+.cardDelete {
+  padding: 6px;
+  margin: 9px 8px 0px 0px;
+  width: 40px;
+  height: 40px;
 }
-.count {
-  color: #999;
-  font-weight: 400;
-  font-family: Inter;
+
+.cardName {
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 0px 0px 18px;
+}
+
+.cardTag {
+  padding: 5px;
+  width: 80px;
+  height: 28px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 10px 0px 15px 60px;
   font-size: 16px;
+  font-family: sans-serif;
+  border: solid 1px black;
+  background-color: #fff;
 }
 
-.modal {
+.third {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0b746;
+}
+
+.car {
+  width: 340px;
+  height: 30px;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+}
+
+.none {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.num {
+  border: 1px solid #000;
+  height: 30px;
+  width: 340px;
+  border-radius: 5px;
+}
+
+.beginReact {
   position: fixed;
   top: 0;
   left: 0;
@@ -88,81 +142,27 @@ body {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.3);
   display: none;
+  z-index: 1;
 }
 
-.sector {
-  width: 370px;
-  height: 340px;
-  border: 1px solid #888;
-  padding: 40px;
+.kahoot {
+  padding: 15px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 8px;
+  gap: 15px;
 }
 
-.num {
+.too {
   display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.enter {
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 5px;
-}
-
-.name {
-  width: 100%;
-  height: 43px;
-  border: 1px solid #999999;
-  border-radius: 4px;
-  background-color: #1e1e1e;
-  padding-left: 10px;
-}
-
-.select {
-  width: 100%;
-  height: 43px;
-  border: 1px solid #999999;
-  border-radius: 4px;
-  background-color: #1e1e1e;
-  padding-left: 10px;
-  color: #fff;
-}
-
-.submit {
-  width: 100%;
-  height: 44px;
-  background-color: #00a300;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.5);
   font-weight: 600;
-  font-size: 16px;
 }
 
-.task {
-  display: flex;
-  padding: 14px;
-  gap: 6px;
-  justify-content: space-between;
-  background-color: #1a1a1a;
-  border-radius: 6px;
-  margin-top: 20px;
-}
-
-.task_text {
-  color: #fff;
-}
-
-p {
-  color: #fff;
-}
-
-.crud {
-  display: flex;
-  gap: 4px;
+.meg {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: sans-serif;
+  margin-left: 5px;
 }
