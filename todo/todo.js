@@ -1,17 +1,18 @@
-const addCard = document.querySelectorAll(".second");
-const form = document.querySelector("form");
-const todoCards = document.querySelectorAll(".todoCards");
-const beginReact = document.querySelector(".beginReact");
-const turns = document.querySelectorAll(".too");
+const addCard = document.querySelectorAll(".second"); //modal gargah uyd click hiih button
+const beginReact = document.querySelector(".beginReact"); //add task click hiih uyd garch ireh modal
+const todoCards = document.querySelectorAll(".todoCards"); //shineer task nemeh uyd todoCards div-iin innerHTML ruu nemeh
+const form = document.querySelector("form"); //modal garch ireh uyd bugluh heseg
+const turns = document.querySelectorAll(".too"); //task count
 
-let count = 1;
-let data = [];
+let count = 1; //tuhain category-t bga taskiin too
+let data = []; //shineer task nemegdeh uyd hooson array ruugaa nemeh
 
 const setData = (arr) => {
   data = arr;
   render();
 };
 
+//catogory-oor ni angilj task nemeh
 const render = () => {
   todoCards[0].innerHTML = "";
   todoCards[1].innerHTML = "";
@@ -30,6 +31,7 @@ const render = () => {
     }
   });
 
+  //tuhain id-tai uussen taskiin id gaar ni barij delete hiih
   const deleteBtns = document.querySelectorAll(".cardDelete");
 
   deleteBtns.forEach((btn) => {
@@ -43,6 +45,7 @@ const render = () => {
   });
 };
 
+//todoCards.innerHTML ruu nemegdeh shine task(shine task bur tusdaa id tai uusej bh)
 const Card = (props) => {
   const { title, id } = props;
 
@@ -63,23 +66,21 @@ const Card = (props) => {
 
 render();
 
+//add task button darah uyd garch ireh modal
 addCard.forEach((item) => {
   item.addEventListener("click", () => {
     beginReact.style.display = "flex";
   });
 });
 
+//modal neegdeh uyd bugluh form
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const { elements } = event.target;
   const title = elements.title.value;
   const status = elements.status.value;
-
   const newData = [...data, { title, id: "id" + count, status }];
-
   count++;
-
   setData(newData);
-
   beginReact.style.display = "none";
 });
